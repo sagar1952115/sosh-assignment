@@ -1,6 +1,5 @@
 const express = require("express");
 const dotenv = require("dotenv");
-// const dbConnect = require("./dbConnect");
 const authRouter = require("./routers/authRouter");
 const blogRouter = require("./routers/blogRouter");
 const bodyparser = require("body-parser");
@@ -17,7 +16,7 @@ app.use("/auth", authRouter);
 app.use("/blogs", blogRouter);
 
 app.get("/", (req, res) => {
-  res.status(200).send("Ok from server");
+  res.status(200).send("Server is up and running!!!");
 });
 
 const PORT = process.env.PORT;
